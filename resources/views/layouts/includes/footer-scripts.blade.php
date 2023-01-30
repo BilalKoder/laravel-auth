@@ -1,0 +1,12 @@
+<script src="{{URL::asset('assets/js/vendors/jquery-3.5.1.min.js')}}"></script>
+<script src="{{URL::asset('assets/js/vendors/bootstrap.bundle.min.js')}}"></script>
+<script src="{{URL::asset('assets/js/vendors/bootstrap-slider.min.js')}}"></script>
+<script src="{{URL::asset('assets/js/vendors/jquery.countdown.min.js')}}"></script>
+<script src="{{URL::asset('assets/js/vendors/jquery.easing.min.js')}}"></script>
+<script src="{{URL::asset('assets/js/vendors/owl.carousel.min.js')}}"></script>
+<script src="{{URL::asset('assets/js/vendors/validator.min.js')}}"></script>
+<script src="{{URL::asset('assets/js/vendors/jquery.waypoints.min.js')}}"></script>
+<script src="{{URL::asset('assets/js/vendors/jquery.rcounterup.js')}}"></script>
+<script src="{{URL::asset('assets/js/vendors/magnific-popup.min.js')}}"></script>
+<script src="{{URL::asset('assets/js/vendors/hs.megamenu.js')}}"></script>
+<script src="{{URL::asset('assets/js/app.js')}}"></script>
