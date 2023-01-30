@@ -26,12 +26,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <!--title-->
-    <title>Hostlar - Hosting Provider with WHMCS Template</title>
+    <title>Bloomai - API</title>
 
     <!--build:css-->
     <link rel="stylesheet" href="{{URL::asset('assets/css/main.css')}}">
     <!-- endbuild -->
     <link rel="stylesheet" href="{{URL::asset('assets/css/custom.css')}}">
+    <style>
+        html {
+        scroll-behavior: smooth;
+        }
+
+    </style>
 </head>
 
 <body>
@@ -50,7 +56,7 @@
     <!--header section start-->
     <header id="header" class="header-main">
         <!--topbar start-->
-        @include('layouts.includes.topbar')
+        {{-- @include('layouts.includes.topbar') --}}
         <!--topbar end-->
 
         <!--main header menu start-->

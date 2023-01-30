@@ -120,9 +120,9 @@
     <div class="container">
         <div class="row align-items-center justify-content-between">
             <div class="col-md-5 col-lg-5">
-                <p class="copyright-text pb-0 mb-0">Copyrights © 2021. All
+                <p class="copyright-text pb-0 mb-0">Copyrights © 2023. All
                     rights reserved by
-                    <a href="https://themeforest.net/user/themetags" target="_blank">ThemeTags</a>
+                    <a href="javascript:void(0)" target="_blank">Mo Salah</a>
                 </p>
             </div>
             <div class="col-md-7 col-lg-6">

@@ -2,33 +2,19 @@
 
 @section('content')
 <!--hero section start-->
-   <section class="hero-equal-height ptb-100">
+   <section class="hero-equal-height ptb-100" id="home-section">
     <div class="container">
         <div class="row justify-content-between">
             <div class="col-lg-6 col-12">
                 <div class="hero-content-wrap mt-lg-5 mt-md-5">
                     <h1>For Unique Domain Search!</h1>
                     <p class="lead">Searching for that perfect domain? Progressively benchmark turnkey innovation after quality channels.</p>
-                    <form action="domain-search-result.php" class="domain-search-form mt-3">
-                        <div class="input-group">
-                            <input type="text" name="domain" id="domain" class="form-control" placeholder="example.com" />
-                            <div class="input-group-append">
-                                <button class="btn search-btn btn-hover d-flex align-items-center" type="submit">
-                                    <span class="ti-search mr-2"></span> Search
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-                    <div class="domain-list-wrap mt-4">
-                        <ul class="list-inline domain-search-list">
-                            <li class="list-inline-item"><a href="#"><img src="assets/img/com.png" alt="com" width="70" class="img-fluid" /> <span>$8.99</span></a></li>
-                            <li class="list-inline-item"><a href="#"><img src="assets/img/online.png" alt="com" width="70" class="img-fluid" /> <span>$0.99</span></a></li>
-                            <li class="list-inline-item"><a href="#"><img src="assets/img/net.png" alt="com" width="70" class="img-fluid" /> <span>$4.99</span></a></li>
-                            <li class="list-inline-item"><a href="#"><img src="assets/img/org.png" alt="com" width="70" class="img-fluid" /> <span>$2.99</span></a></li>
-                            <li class="list-inline-item"><a href="#"><img src="assets/img/store.png" alt="com" width="70" class="img-fluid" /> <span>$0.99</span></a></li>
-                        </ul>
-                    </div>
                 </div>
+                <div class="action-btns mt-4">
+                                <a href="{{ route('login') }}" class="btn primary-solid-btn  animated-btn mr-3">Get
+                                    Started Now</a>
+                                <a href="#pricing" class="btn outline-btn   animated-btn">See Price Plan</a>
+                            </div>
             </div>
             <div class="col-lg-5 col-12">
                 <div class="hero-image">
@@ -44,7 +30,7 @@
 <!--hero section end-->
 
 <!--promo-section section start-->
-<section class="feature-promo-seciton ptb-100 ">
+<section class="feature-promo-seciton ptb-100 " >
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-9 col-lg-8">
@@ -101,7 +87,7 @@
 <!--promo-section section end-->
 
 <!--feature section tab style start-->
-<section id="features" class="feature-tab-section ptb-100 white-bg">
+<section id="features" class="feature-tab-section ptb-100 white-bg" >
     <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -270,7 +256,7 @@
 <!--call to action section end-->
 
 <!--pricing with switch section start-->
-<section class="pricing-section ptb-100">
+<section class="pricing-section ptb-100" id="pricing-section">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-9 col-lg-8">
@@ -397,25 +383,6 @@
     </div>
 </section>
 <!--pricing with switch section end-->
-
-<!--call to action section start-->
-<section class="call-to-action ptb-100 gradient-overlay " style="background: url('assets/img/hero-bg-4.jpg')no-repeat center center / cover">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-9 col-lg-8">
-                <div class="cta-new-wrap text-white text-center">
-                    <h2 class="text-white">30-day Money-back Guarantee</h2>
-                    <p class="lead">Globally parallel task granular alignments through excellent intellectual capital. Globally deploy vertical leadership.</p>
-                    <div class="action-btns mt-4">
-                        <a href="#" class="btn solid-white-btn animated-btn mr-lg-3">Get
-                            Started Now</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!--call to action section end-->
 
 <!--faq section start-->
 <div id="faq" class="ptb-100 white-bg">
@@ -641,58 +608,6 @@
     </div>
 </section>
 <!--testimonial and review section end-->
-
-<!--network map section start-->
-<section class="network-map-section ptb-100 ">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-9 col-lg-8">
-                <div class="section-heading text-center mb-5">
-                    <h2>Our Data centers Location</h2>
-                    <p class="lead">Cloudhub offers a low latency worldwide network, enabling you to deploy your
-                        service infrastructure in close proximity to your customer base.</p>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <div class="network-map-wrap">
-                    <ul class="custom-map-location">
-                        <li style="top: 29%; left: 15.5%;">
-                            <span data-toggle="tooltip" data-placement="top" title="Canada"></span>
-                        </li>
-                        <li style="top: 42%; left: 20%;">
-                            <span data-toggle="tooltip" data-placement="top" title="United States"></span>
-                        </li>
-                        <li style="top: 70%; left: 32%;">
-                            <span data-toggle="tooltip" data-placement="top" title="Brazil"></span>
-                        </li>
-                        <li style="top: 57%; left: 48%;">
-                            <span data-toggle="tooltip" data-placement="top" title="Nigeria"></span>
-                        </li>
-                        <li style="top: 18%; left: 53%;">
-                            <span data-toggle="tooltip" data-placement="top" title="Finland"></span>
-                        </li>
-                        <li style="top: 34%; left: 55%;">
-                            <span data-toggle="tooltip" data-placement="top" title="Ukraine"></span>
-                        </li>
-                        <li style="top: 45%; left: 68%;">
-                            <span data-toggle="tooltip" data-placement="top" title="India"></span>
-                        </li>
-                        <li style="top: 35%; left: 80%;">
-                            <span data-toggle="tooltip" data-placement="top" title="China"></span>
-                        </li>
-                        <li style="top: 77%; left: 85%;">
-                            <span data-toggle="tooltip" data-placement="top" title="Australia"></span>
-                        </li>
-                    </ul>
-                    <img src="assets/img/map-dark.svg" alt="location map">
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!--network map section end-->
 
 <!--call to action new style start-->
 <section class="call-to-action ptb-100 gray-light-bg ">
