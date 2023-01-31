@@ -3,7 +3,7 @@
         <nav class="js-mega-menu navbar navbar-expand-md header-nav">
 
             <!--logo start-->
-            <a class="navbar-brand" href="index.html"><img src="assets/img/logo-color.png" width="120" alt="logo" class="img-fluid" /></a>
+            <a class="navbar-brand" href="{{url('/')}}"><img src="{{URL::asset('assets/img/new-logo.png')}}" width="120" alt="logo" class="img-fluid" /></a>
             <!--logo end-->
 
             <!--responsive toggle button start-->
@@ -23,7 +23,13 @@
                     </li>
                     <!--home end-->
 
-                    
+                        <!--pages start-->
+                        <li class="nav-item hs-has-sub-menu custom-nav-item">
+                        <a id="pagesMegaMenu" class="nav-link custom-nav-link" href="{{ route('pricing') }}" aria-haspopup="true" aria-expanded="false" aria-labelledby="pagesSubMenu">Pricing</a>
+                    </li>
+                    <!--pages end-->
+
+                        
                     <!--support start-->
                     <li class="nav-item hs-has-mega-menu custom-nav-item" data-max-width="360px" data-position="right">
                         <a id="supportMegaMenu" class="nav-link custom-nav-link" href="{{ route('about-us') }}" aria-haspopup="true" aria-expanded="false">About Us</a>
@@ -31,26 +37,17 @@
                     <!--support end-->
 
 
-                    <!--pages start-->
-                    <li class="nav-item hs-has-sub-menu custom-nav-item">
-                        <a id="pagesMegaMenu" class="nav-link custom-nav-link" href="{{ route('pricing') }}" aria-haspopup="true" aria-expanded="false" aria-labelledby="pagesSubMenu">Pricing</a>
-                    </li>
-                    <!--pages end-->
-
+               
 
                     <!--hosting start-->
                     <li class="nav-item hs-has-mega-menu custom-nav-item" data-max-width="720px" data-position="right">
                         <a id="hostingMegaMenu" class="nav-link custom-nav-link" href="{{ route('documentation') }}" aria-haspopup="true" aria-expanded="false">Documentation</a>
                     </li>
                     <!--hosting end-->
-
-
-
-                    <li class="nav-item hs-has-mega-menu custom-nav-item hs-mega-menu-opened " data-max-width="250px" data-position="right">
+                    <li class="nav-item hs-has-mega-menu custom-nav-item " data-max-width="250px" data-position="right">
                     <a id="aboutMegaMenu" class="nav-link custom-nav-link main-link-toggle" href="{{ route('contact-us') }}" aria-haspopup="true" aria-expanded="false">Contact Us</a>
                                 <!--about submenu start-->
                                 <div class="hs-mega-menu main-sub-menu animated hs-position-right" aria-labelledby="aboutMegaMenu" style="min-width: 330px; max-width: 250px; display: block;">
-
                                     <!--menu title with subtitle and icon item start-->
                                     <div class="title-with-icon-item">
                                         <a class="title-with-icon-link" href="{{route('terms-and-conditions')}}">
@@ -65,7 +62,6 @@
                                         </a>
                                     </div>
                                     <!--menu title with subtitle and icon item end-->
-
                                     <!--menu title with subtitle and icon item start-->
                                     <div class="title-with-icon-item">
                                         <a class="title-with-icon-link" href="{{route('privacy-policy')}}">

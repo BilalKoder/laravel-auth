@@ -55841,7 +55841,7 @@ button.scroll-top:focus {
 .footer-nav-wrap ul li a {
   font-size: 14px;
   line-height: 20px;
-  padding: 8px 0;
+  padding: 8px 15px;
   color: inherit;
   opacity: 0.8;
 }

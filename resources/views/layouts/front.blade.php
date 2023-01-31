@@ -26,7 +26,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <!--title-->
-    <title>Bloomai - API</title>
+    <title>Bloom - API</title>
 
     <!--build:css-->
     <link rel="stylesheet" href="{{URL::asset('assets/css/main.css')}}">
