@@ -14,29 +14,43 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
+//landing page
+
 Route::get('/', function () {
     return view('welcome');
 });
+
+//about us page
 
 Route::get('/about-us', function () {
     return view('pages.about-us');
 })->name('about-us');
 
+//contact us page
+
 Route::get('/contact-us', function () {
     return view('pages.contact');
 })->name('contact-us');
+
+//documentation page
 
 Route::get('/documentation', function () {
     return view('pages.documentation');
 })->name('documentation');
 
+//pricing page
+
 Route::get('/pricing', function () {
     return view('pages.pricing');
 })->name('pricing');
 
+//Terms & Conditions page
+
 Route::get('/terms-and-conditions', function () {
     return view('pages.terms-and-conditions');
 })->name('terms-and-conditions');
+
+//Privacy Policy page
 
 Route::get('/privacy-policy', function () {
     return view('pages.privacy-policy');
