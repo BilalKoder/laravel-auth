@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
   
 use App\Http\Controllers\API\RegisterController;
 use App\Http\Controllers\API\ProductController;
+use App\Http\Controllers\API\UserController;
   
 /*
 |--------------------------------------------------------------------------
@@ -22,5 +23,6 @@ Route::post('register', [RegisterController::class, 'register']);
 Route::post('login', [RegisterController::class, 'login']);
      
 Route::middleware('auth:api')->group( function () {
-    // Route::resource('products', ProductController::class);
+    Route::get('check-usage', [UserController::class,'checkUsageStatus'])->name('check-usage');
+    Route::get('hit-add', [UserController::class,'updateRequestCount']);
 });
