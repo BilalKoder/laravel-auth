@@ -7,7 +7,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\API\RegisterController;
 use App\Http\Controllers\API\ProductController;
 use App\Http\Controllers\PaypalController;
-
+use App\Http\Controllers\API\UserController;
+  
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -25,5 +26,6 @@ Route::post('login', [RegisterController::class, 'login']);
 Route::get('pay', [PaypalController::class, 'index']);
      
 Route::middleware('auth:api')->group( function () {
-    // Route::resource('products', ProductController::class);
+    Route::get('check-usage', [UserController::class,'checkUsageStatus'])->name('check-usage');
+    Route::get('hit-add', [UserController::class,'updateRequestCount']);
 });

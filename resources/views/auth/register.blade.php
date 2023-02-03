@@ -61,6 +61,14 @@
                             </div>
                         </div>
 
+                        <div class="row mb-3">
+                            <label for="usage-limit" class="col-md-4 col-form-label text-md-end">Usage Limit</label>
+
+                            <div class="col-md-6">
+                                <input id="usage-limit" type="number" class="form-control" name="usage_limit" required autocomplete="usage-limit">
+                            </div>
+                        </div>
+
                         <div class="row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
@@ -74,4 +82,7 @@
         </div>
     </div>
 </div>
+<script
+  src="https://www.paypal.com/sdk/js?client-id=AXP1AwQrO05HEPBZWsbXiFPIBMBX7UCsvAsW9vIDY2wDjHZiiVRk5gppAs5MIfIJCYE-9Bv9fKt5kiHj&intent=authorize">
+</script>
 @endsection
