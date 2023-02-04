@@ -18,32 +18,25 @@ class PaypalController extends BaseController
     public function index()
     {
 
-        $token =  $this->generateAccessToken();
-
-        if(!$token){
-            return $this->sendError('Validation Error.', "some error occured");
-        }
-
-        $currentDate = Carbon::now();
-
          $users = User::all();
-               
-          $invoice = $this->generateInvoice($token);
-          
-          if(!$invoice){
-            return $this->sendError('Validation Error.', "some error occured");
-          }
-        
-          $id = $invoice->id;
 
-          $saveInvoice = new Invoices;
-          $saveInvoice->invoice_id= (string)$id;
-          $saveInvoice->payload=json_encode($invoice);
-          $saveInvoice->user_id=1;
-          $saveInvoice->save();
+         if($users){
 
-          return $this->sendResponse($saveInvoice, "Success");
-                
+            foreach ($users as $key => $value) {
+             
+                $invoice = $this->generateInvoice($value);
+                // dd($invoice);
+                if($invoice){
+                    $id = $invoice->id;
+                    $saveInvoice = new Invoices;
+                    $saveInvoice->invoice_id= (string)$id;
+                    $saveInvoice->payload=json_encode($invoice);
+                    $saveInvoice->user_id=  $value->id;
+                    $saveInvoice->save();
+                }
+            }
+         }
+        return $this->sendResponse(true, "Success");
     }
 
     public function sendInvoice(){
@@ -67,7 +60,6 @@ class PaypalController extends BaseController
     public function invoiceWebhookEvent(Request $request){
 
         if($request){
-
             $WEBHOOK = $request->all();
             $invoiceId = $WEBHOOK['resource']['id'];
                 Invoices::where('invoice_id', $invoiceId)
