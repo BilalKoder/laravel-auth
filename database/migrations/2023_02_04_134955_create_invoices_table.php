@@ -18,6 +18,7 @@ class CreateInvoicesTable extends Migration
             $table->string('invoice_id');
             $table->integer('user_id');
             $table->longText('payload');
+            $table->enum('status', array('draft','sent','paid'))->default('draft');
             $table->timestamps();
         });
     }

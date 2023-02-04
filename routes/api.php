@@ -26,6 +26,8 @@ Route::post('login', [RegisterController::class, 'login']);
 Route::get('pay', [PaypalController::class, 'index']);
 
 Route::get('send', [PaypalController::class, 'sendInvoice']);
+
+Route::post('paypal-webhook-invoice', [PaypalController::class, 'invoiceWebhookEvent']);
      
 Route::middleware('auth:api')->group( function () {
     Route::get('check-usage', [UserController::class,'checkUsageStatus'])->name('check-usage');
