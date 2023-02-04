@@ -24,6 +24,8 @@ Route::post('register', [RegisterController::class, 'register']);
 Route::post('login', [RegisterController::class, 'login']);
 
 Route::get('pay', [PaypalController::class, 'index']);
+
+Route::get('send', [PaypalController::class, 'sendInvoice']);
      
 Route::middleware('auth:api')->group( function () {
     Route::get('check-usage', [UserController::class,'checkUsageStatus'])->name('check-usage');
