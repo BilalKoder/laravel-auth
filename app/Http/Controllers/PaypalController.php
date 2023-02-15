@@ -9,6 +9,7 @@ use App\Traits\Paypal;
 use App\Models\Invoices;
 use App\Models\User;
 use App\Models\Transactions;
+use Illuminate\Support\Facades\Log;
 
 class PaypalController extends BaseController
 {
@@ -60,6 +61,7 @@ class PaypalController extends BaseController
     public function invoiceWebhookEvent(Request $request){
 
         if($request){
+            Log::info('Webhook ran');
             $WEBHOOK = $request->all();
             $invoiceId = $WEBHOOK['resource']['id'];
                 Invoices::where('invoice_id', $invoiceId)

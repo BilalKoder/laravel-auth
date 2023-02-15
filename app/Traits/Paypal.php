@@ -29,8 +29,10 @@ trait Paypal
         curl_close($ch); //THIS CODE IS NOW WORKING!
 
 
-        if (empty($result))
+        if (empty($result)){
+            Log::warning('Error in generating access token', [$ch]);
             return false;
+        }
 
         $json = json_decode($result);
         $token = $json->access_token;
@@ -70,6 +72,7 @@ trait Paypal
         $result = curl_exec($ch);
 
         if (curl_errno($ch)) {
+            Log::warning('Error in draft invoice', [$ch]);
             return false;
         }
         curl_close($ch);
@@ -99,6 +102,7 @@ trait Paypal
 
         $result = curl_exec($ch);
         if (curl_errno($ch)) {
+            Log::warning('Error in send invoice', [$ch]);
             return false;
         }
         curl_close($ch);
